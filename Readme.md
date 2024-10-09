@@ -1,4 +1,4 @@
-## 1. Describe the Problem
+## 1. The Problem
 
 As a user
 So I don't forget the details
@@ -21,7 +21,7 @@ So I can buy age-appropriate birthday cards
 I want to calculate the upcoming ages for friends with birthdays
 
 
-## 2. Design the Class Interface
+## 2. Class Interface
 
 ```python
 # EXAMPLE
@@ -49,39 +49,20 @@ class my_friends:
     
 ```
 
-## 3. Create Examples as Tests
+## 3. Examples Tests
 
-_Make a list of examples of how the class will behave in different situations._
 
 ``` python
 # EXAMPLE
+def test_my_friends_birthdays_is_init_instance():
+    #checks if self.birthdays is initialised
 
-"""
-Given a name and a task
-#remind reminds the user to do the task
-"""
-reminder = Reminder("Kay")
-reminder.remind_me_to("Walk the dog")
-reminder.remind() # => "Walk the dog, Kay!"
+def test_update_birthdays_changes_self_birthdays():
+    #runs update birthdays and checks if self.birthdays changes
 
-"""
-Given a name and no task
-#remind raises an exception
-"""
-reminder = Reminder("Kay")
-reminder.remind() # raises an error with the message "No task set."
+def test_upcoming_birthdays_return_correctly():
+    #runs upcoming_birthdays and checks the return
 
-"""
-Given a name and an empty task
-#remind still reminds the user to do the task, even though it looks odd
-"""
-reminder = Reminder("Kay")
-reminder.remind_me_to("")
-reminder.remind() # => ", Kay!"
+def test_age_appropriate_return_correctly():
+    #runs age_appropriate and checks the return
 ```
-
-_Encode each example as a test. You can add to the above list as you go._
-
-## 4. Implement the Behaviour
-
-_After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour._
