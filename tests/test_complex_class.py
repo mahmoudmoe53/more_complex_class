@@ -15,3 +15,8 @@ def test_upcoming_birthdays_return_correctly():
     friends = my_friends({"Harry": "1998-07-05", "Alice": "1997-03-02", "David": "1994-11-02", "Lucy": "1982-07-05", "Michael": "2001-12-05"})
     result = friends.upcoming_birthdays()
     assert result == "Upcoming birthdays: David Michael"
+
+def test_age_appropriate_return_correctly():
+    friends = my_friends({"Harry": "1998-07-05", "Alice": "1997-03-02", "David": "1994-11-02", "Lucy": "1982-07-05", "Michael": "2001-12-05"})
+    result = friends.age_appropriate()
+    assert result == "These people will turn: David: 30 Michael: 23"
